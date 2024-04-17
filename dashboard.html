@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="./node_modules/apexcharts/dist/apexcharts.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <title>Dashboard | Hotel Management</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  </head>
+  <body>
+    <main>
+      <div class="mainCont_wrapper">
+        <!-- sidebar area -->
+        <div class="sidebar">
+          <nav class="navbar navbar-expand-lg flex-column">
+            <div class="headerBar">
+                <a class="navbar-brand me-0" href="./dashboard.html">
+                  <img src="./assets/img/hotal-logo.png" alt=" Surya-Paradise">
+                  <span>Surya <br> Paradise</span>
+                </a>
+                <span class="CloseBtn"><i class="bi bi-arrow-left"></i></span>
+            </div>
+
+            <div class="sidebar_menu">
+              <ul class="navbar-nav flex-column me-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                  <a class="nav-link" href="./dashboard.html">
+                    <i class="bi bi-speedometer me-2"></i><span>Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="./rooms.html">
+                    <i class="bi bi-house-check me-2"></i><span>Rooms</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./booking.html">
+                    <i class="bi bi-journal-bookmark-fill me-2"></i><span>Booking</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./staff.html">
+                        <i class="bi bi-people me-2"></i><span>Staff</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./report.html">
+                    <i class="bi bi-graph-up-arrow me-2"></i><span>Report</span>
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="settings.html">
+                    <i class="bi bi-sliders me-2"></i><span>Settings</span>
+                </a>
+                </li>                
+              </ul>
+              <div class="toggle_wrap">
+                <div class="toggle"></div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- main body area -->
+        <div class="main_body">
+          <!-- header area -->
+          <header class="lt_rt_wrapper justify-content-between">
+            <div class="left_area">
+              <div class="searchField">
+                <input type="text" class="form-control shadow-none" placeholder="Search here..." id="mainSearch">
+                <span class="searchIcon"><i class="bi bi-search"></i></span>
+              </div>
+            </div>
+            <div class="right_area">
+              <div class="dropdown">
+                <button class="btn custom-outline dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <i class="bi bi-bell"></i>
+                  <span class="count">10</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="javaScript:void(0)">Notification list one</a></li>
+                  <li><a class="dropdown-item" href="javaScript:void(0)">Notification list two</a></li>
+                  <li><a class="dropdown-item" href="javaScript:void(0)">Notification list three</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn custom-outline dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <i class="bi bi-envelope"></i>
+                  <span class="count">2</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="javaScript:void(0)">Email List one</a></li>
+                  <li><a class="dropdown-item" href="javaScript:void(0)">Email List two</a></li>
+                  <li><a class="dropdown-item" href="javaScript:void(0)">Email List three</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <div class="btn custom-outline dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <img src="./assets/img/Surya-Avatar.png" alt="Surya-Avatar">
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="javaScript:void(0)">Surya Web</a></li>
+                  <li><a class="dropdown-item" href="javaScript:void(0)">Settings</a></li>
+                  <li><a class="dropdown-item" href="javaScript:void(0)">Log Out</a></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <!-- overview area -->
+          <div class="overview_area">
+            <div class="heading"><h1>Overview</h1></div>
+            <div class="row my-3">
+              <div class="col-xxl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="card_wrap bg-primary">
+                  <div class="icon_wrap">
+                    <i class="bi bi-house"></i>
+                  </div>
+                  <div class="content_wrap">
+                    <h3>Total Rooms</h3>
+                    <h4>100</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="card_wrap bg-success">
+                  <div class="icon_wrap">
+                    <i class="bi bi-currency-rupee"></i>
+                  </div>
+                  <div class="content_wrap">
+                    <h3>Total Earning</h3>
+                    <h4>100</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="card_wrap bg-warning">
+                  <div class="icon_wrap">
+                    <i class="bi bi-bookmark"></i>
+                  </div>
+                  <div class="content_wrap">
+                    <h3>Total Bookings</h3>
+                    <h4>100</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="card_wrap bg-danger">
+                  <div class="icon_wrap">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="content_wrap">
+                    <h3>Total Staff</h3>
+                    <h4>100</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-lg-8">
+                <div id="curverChart"></div>
+              </div>
+              <div class="col-lg-4">
+                <div id="calendar"></div>
+
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-lg-12">
+                <div class="top_wrapper">
+                  <div class="heading"><h2>Booking</h2></div>
+                  <div class="larger-btn"><a href="./booking.html"><i class="bi bi-eye"></i> View All</a></div>
+                </div>
+                <div class="box table-responsive">
+                  <table class="customerList table-striped-columns display" style="width:100%">
+                      <thead class="custom-bg">
+                          <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Phone No.</th>
+                            <th>Room Type</th>
+                            <th>ID Proof</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
+                            <th>Status</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Styam Singh</td>
+                            <td>8521489063</td>
+                            <td>Single</td>
+                            <td>Aadhar Card</td>
+                            <td>13/04/2024</td>
+                            <td>16/04/2024</td>
+                            <td>Proccessing</td>
+                          </tr>
+                      </tbody>
+                      <tfoot class="custom-bg">
+                        <tr>
+                          <th>No</th>
+                          <th>Name</th>
+                          <th>Phone No.</th>
+                          <th>Room Type</th>
+                          <th>ID Proof</th>
+                          <th>Check In</th>
+                          <th>Check Out</th>
+                          <th>Status</th>
+                        </tr>
+                      </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-lg-8">
+                <div class="top_wrapper">
+                  <div class="heading"><h2>Guest Review</h2></div>
+                  <div class="larger-btn"><a href="javaScript:void(0)"><i class="bi bi-eye"></i> View All</a></div>
+                </div>
+                <div class="list_items_wrapper">
+                  <ul>
+                    <li>
+                      <div class="guest_details_wrap">
+                        <div class="guest_img">
+                          <img src="./assets/img/guest-1.jpg" alt="guest">
+                        </div>
+                        <div class="guest_details">
+                          <h3>Styam Singh</h3>
+                          <span>Businessman</span>
+                        </div>
+                      </div>
+                      <div class="rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <i class="bi bi-star"></i>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="guest_details_wrap">
+                        <div class="guest_img">
+                          <img src="./assets/img/guest-2.jpg" alt="guest">
+                        </div>
+                        <div class="guest_details">
+                          <h3>Sneha Singh</h3>
+                          <span>Entrepreneur</span>
+                        </div>
+                      </div>
+                      <div class="rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <i class="bi bi-star"></i>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="delModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>    
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+  </body>
+</html>

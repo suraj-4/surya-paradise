@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./node_modules/apexcharts/dist/apexcharts.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <title>Rooms | Hotel Management</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  </head>
+  <body>
+    <main>
+      <div class="mainCont_wrapper">
+        <!-- sidebar area -->
+        <div class="sidebar">
+          <nav class="navbar navbar-expand-lg flex-column">
+            <div class="headerBar">
+                <a class="navbar-brand me-0" href="./dashboard.html">
+                  <img src="./assets/img/hotal-logo.png" alt=" Surya-Paradise">
+                  <span>Surya <br> Paradise</span>
+                </a>
+                <span class="CloseBtn"><i class="bi bi-arrow-left"></i></span>
+            </div>
+            
+            <div class="sidebar_menu">
+              <ul class="navbar-nav flex-column me-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                  <a class="nav-link" href="./dashboard.html">
+                    <i class="bi bi-speedometer me-2"></i><span>Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="javaScript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-house-check me-2"></i><span>Rooms</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./rooms.html">All Rooms</a></li>
+                    <li><a class="dropdown-item" href="#">Add new Rooms</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./booking.html">
+                    <i class="bi bi-journal-bookmark-fill me-2"></i><span>Booking</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./staff.html">
+                        <i class="bi bi-people me-2"></i><span>Staff</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./report.html">
+                    <i class="bi bi-graph-up-arrow me-2"></i><span>Report</span>
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="settings.html">
+                    <i class="bi bi-sliders me-2"></i><span>Settings</span>
+                </a>
+                </li>                
+              </ul>
+              <div class="toggle_wrap">
+                <div class="toggle"></div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- main body area -->
+        <div class="main_body">
+          <!-- header area -->
+          <header class="lt_rt_wrapper justify-content-between">
+            <div class="left_area">
+              <div class="searchField">
+                <input type="text" class="form-control shadow-none" placeholder="Search here..." id="mainSearch">
+                <span class="searchIcon"><i class="bi bi-search"></i></span>
+              </div>
+            </div>
+            <div class="right_area">
+              <div class="dropdown">
+                <button class="btn custom-outline dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <i class="bi bi-bell"></i>
+                  <span class="count">10</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Notification list one</a></li>
+                  <li><a class="dropdown-item" href="#">Notification list two</a></li>
+                  <li><a class="dropdown-item" href="#">Notification list three</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn custom-outline dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <i class="bi bi-envelope"></i>
+                  <span class="count">2</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Email List one</a></li>
+                  <li><a class="dropdown-item" href="#">Email List two</a></li>
+                  <li><a class="dropdown-item" href="#">Email List three</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <div class="btn custom-outline dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <img src="./assets/img/Surya-Avatar.png" alt="Surya-Avatar">
+                </div>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Surya Web</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Log Out</a></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <div class="overview_area">
+            <div class="top_wrapper">
+              <div class="heading"><h2>All Rooms Details</h2></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>    
+<script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/apexcharts/dist/apexcharts.min.js"></script>
+<script src="./assets/js/custom.js"></script>
+</body>
+</html>
